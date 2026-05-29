@@ -1,0 +1,83 @@
+[
+  {
+    "case_id": "reach_001",
+    "scenario_type": "reachable_target",
+    "action": {
+      "action_id": "reach_001",
+      "action_type": "move_end_effector",
+      "target_pose": {
+        "position": [
+          0.45,
+          0.1,
+          0.35
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "estimated_duration_s": 1.2,
+      "constraints": {
+        "max_duration_s": 2.0
+      }
+    },
+    "expected_feasible": true,
+    "expected_failure": null
+  },
+  {
+    "case_id": "reach_002",
+    "scenario_type": "ik_unreachable",
+    "action": {
+      "action_id": "reach_002",
+      "action_type": "move_end_effector",
+      "target_pose": {
+        "position": [
+          3.2,
+          0.1,
+          1.8
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "estimated_duration_s": 1.0,
+      "constraints": {
+        "max_duration_s": 2.0
+      }
+    },
+    "expected_feasible": false,
+    "expected_failure": "workspace_violation:x"
+  },
+  {
+    "case_id": "reach_003",
+    "scenario_type": "timing_infeasible",
+    "action": {
+      "action_id": "reach_003",
+      "action_type": "move_end_effector",
+      "target_pose": {
+        "position": [
+          0.3,
+          0.2,
+          0.3
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "estimated_duration_s": 5.0,
+      "constraints": {
+        "max_duration_s": 2.0
+      }
+    },
+    "expected_feasible": false,
+    "expected_failure": "timing_infeasible"
+  }
+]

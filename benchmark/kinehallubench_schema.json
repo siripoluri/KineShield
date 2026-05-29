@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KineHalluBenchCase",
+  "type": "object",
+  "required": [
+    "case_id",
+    "action",
+    "expected_feasible"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "action": {
+      "type": "object"
+    },
+    "expected_feasible": {
+      "type": "boolean"
+    },
+    "expected_failure": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "scenario_type": {
+      "type": "string"
+    }
+  }
+}
