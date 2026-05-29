@@ -8,8 +8,8 @@ def check_ik_reachability(
 ) -> tuple[bool, Optional[str]]:
     """Baseline IK reachability proxy.
 
-    This is a scaffold for early testing. A full version can replace this with
-    a MoveIt IK service call or robot-specific kinematics solver.
+    This fallback is used when MoveIt is not available. It gives the repo a
+    lightweight non-ROS path for tests and examples.
     """
     if len(target_position) != 3:
         return False, "invalid_target_pose"
